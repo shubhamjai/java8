@@ -1,6 +1,6 @@
 package main.java.part1.functions;
 
-import main.java.part1.functions.entity.Person;
+import main.java.entity.Person;
 
 /**
  * Created by shubham on 06-05-2017.

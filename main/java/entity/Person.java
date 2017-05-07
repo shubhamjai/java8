@@ -1,4 +1,4 @@
-package main.java.part1.functions.entity;
+package main.java.entity;
 
 /**
  * Created by shubham on 06-05-2017.

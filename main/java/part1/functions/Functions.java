@@ -1,15 +1,13 @@
 package main.java.part1.functions;
 
-import main.java.part1.functions.entity.Person;
+import main.java.entity.Person;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Comparator;
-/**
- * Created by shubham on 06-05-2017.
- */
+
 public class Functions {
     public static void main(String args[]) {
         Comparator<Person> cmpAge = (p1, p2) -> p2.getAge() - p1.getAge();

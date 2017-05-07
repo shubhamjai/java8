@@ -1,7 +1,5 @@
 package main.java.part1.functions;
 
-import main.java.part1.functions.entity.Person;
-
 import java.util.function.Function;
 
 @FunctionalInterface

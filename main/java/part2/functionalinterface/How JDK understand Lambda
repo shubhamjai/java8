@@ -1,0 +1,117 @@
+Java 8 compiler understand what is Lambda
+Why?
+Lambda is an instance of Functional interface
+functional interface has only abstract method. So, lambda implementation has to be bound to that abstract method
+In java every thing has type. Type of variable give type of lambda expression
+paramters and return type must be compatible
+same for exceptions
+
+If conditions holds, compiler can guess everthing it needs
+
+
+Defination of functional interface
+
+only one abstract method
+defalut methods do not count
+static method do not count
+Methods from object class do not count(Since Object class methods are avalible)
+may be annotated with @FunctionalInterface
+    - not mandatory, for legacy reasons
+
+4 types of functional interfaces
+
+1. Consumer
+2. Supplier
+3. Functions
+4. Predicates
+
+
+Consumer consumes an object and does not return anything
+(1)
+
+public interface Consumer<T> {
+    public void accept(T t);
+}
+
+Example:
+
+Consumer<String> printer = System.out::println;
+
+(2) BiConsumers
+
+public interface Consumer<T, V> {
+    public void accept(T t, V v);
+}
+
+
+Supplier
+Supplier provides an object,  takes no parameter
+
+public interface Supplier<T> {
+
+    public  T get();
+}
+
+Example:
+
+Supplier<Person> personSupplier = Person:: new;
+
+
+Function
+A function takes an Object and returns an object
+
+(1)
+
+public interface Function<T,R>
+{
+    public R apply(T t);
+}
+
+Example
+
+Function<Person, Integer> ageMapper = Person :: getAge();
+
+(2) BiFunction
+
+public interface Function<T, V, R>
+{
+    public R apply(T t, V v);
+}
+
+3. UnarayOperator
+
+public interface UnarayOperator<T> extends Function<T, T>
+{
+}
+
+4. BinaryOperator
+public interface BinaryOperator<T> extends BiFunction<T, T, T>
+{
+}
+
+
+
+Predicates
+A predicate takes an object and returns a boolean
+
+(1)
+public interface Predicate<T> {
+    public boolean test(T t);
+}
+
+Example
+
+Predicate<Person> agePredicate = person -> person.getAge() > 20;
+
+(2)
+
+(1)
+public interface BiPredicate<T, U> {
+    public boolean test(T t,U u);
+}
+
+Functional Interfaces for Premitive types
+
+IntPredicate
+IntFunction
+IntToDoubleFunction
