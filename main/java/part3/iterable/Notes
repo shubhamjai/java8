@@ -1,0 +1,82 @@
+Iterable and Collection Interfaces
+
+1. On iterable
+
+boolean forEach(Consumer<? super E> consumer);
+
+Example
+
+public void print(List<Person> personList)
+{
+    personList.forEach(System.out::println);
+}
+
+2. On Collection
+
+boolean removeIf(Predicate<? super E> filter);
+
+Example
+
+public void remove(List<Person> personList)
+{
+    personList.removeIf(person -> person.getAge() <18);
+}
+
+3. On List
+
+boolean replaceAll(UnaryOperator<? super E> operator);
+
+boolean sort(Comparator<? super E> comparator);
+
+
+
+Map Interface
+
+(1) forEach
+
+void forEach(BiConsumer<? super K, ? super V> consumer);
+
+Example
+
+public void printCitySize(Map<City, List<Person>> map)
+{
+
+map.forEach(
+    (city, list) ->
+        System.out.println(city + " : " + list.size() + " people");
+    );
+
+}
+
+(2) get()
+
+V getOrDefault(Object key, V defaultValue);
+
+(3) put()
+
+V putIfAbsent(K key, V value);
+
+(4)
+
+V merge(K key, V newValue,
+    BiFunction<? super V>, ? super V, ? super V> remapping);
+
+If the passed key is not in map, then key/value pair to map
+If the passed key is in map, merge the existing value with the new value using lambda expression
+-> remapping takes a pair of values and return a new value
+
+Example
+
+Map<City, List<Person>> map1;
+Map<City, List<Person>> map2;
+
+map2.forEach(
+    (key, value) ->
+        map1.merge(
+                key,value,
+                (existingPeople, newPeople) ->{
+                    existingPeople.addAll(newPeople);
+                    return existingPeople;
+                }
+        )
+);

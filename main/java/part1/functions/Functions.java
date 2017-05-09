@@ -1,8 +1,8 @@
 package main.java.part1.functions;
 
 import main.java.entity.Person;
+import main.java.util.PersonUtil;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
@@ -26,7 +26,7 @@ public class Functions {
     }
 
     private static void sortList(Comparator<Person> comparator) {
-        List<Person> personList = getPersonList();
+        List<Person> personList = PersonUtil.getPersonList();
         Collections.sort(personList, comparator);
         Iterator<Person> iterator = personList.listIterator();
         while (iterator.hasNext()) {
@@ -34,12 +34,4 @@ public class Functions {
         }
     }
 
-    private static List<Person> getPersonList() {
-        List<Person> personList = new ArrayList<Person>();
-        personList.add(new Person("Shubham", "Jain", 28));
-        personList.add(new Person("Vikas", "Kumar", 27));
-        personList.add(new Person("Abhishek", "Kumar", 28));
-        personList.add(new Person("Deepak", "Sharma", 23));
-        return personList;
-    }
 }
