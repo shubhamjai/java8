@@ -1,4 +1,4 @@
-package main.java.part2.functionalinterface.predicate;
+package main.java.lambda.part2.functionalinterface.predicate;
 
 @FunctionalInterface
 public interface Predicate<T> {

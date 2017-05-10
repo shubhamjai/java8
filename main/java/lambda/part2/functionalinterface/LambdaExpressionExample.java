@@ -1,4 +1,4 @@
-package main.java.part2.functionalinterface;
+package main.java.lambda.part2.functionalinterface;
 
 import java.util.function.Predicate;
 

@@ -1,4 +1,4 @@
-package main.java.part1.functions;
+package main.java.lambda.part1.functions;
 
 import main.java.entity.Person;
 

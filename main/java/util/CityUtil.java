@@ -1,7 +1,6 @@
 package main.java.util;
 
 import main.java.entity.City;
-import main.java.entity.Person;
 
 import java.util.ArrayList;
 import java.util.List;

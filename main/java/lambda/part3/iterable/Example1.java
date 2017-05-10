@@ -1,4 +1,4 @@
-package main.java.part3.iterable;
+package main.java.lambda.part3.iterable;
 
 import main.java.entity.Person;
 import main.java.util.PersonUtil;

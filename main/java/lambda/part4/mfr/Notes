@@ -1,0 +1,70 @@
+mfr
+Map
+Filter
+Reduce
+
+map: map data from state to another
+
+For Example:
+List<Person> personList
+List<Integer> ages
+
+for(Person person:personList)
+{
+    ages.add(person.getAge());
+}
+
+Here list of person object is mapped to list of integer
+
+Filter
+Filter operation on data objects is to filter data based on some condition
+
+List<Interger> ages
+List<Interger> filteredAges
+
+for(Integer age:ages)
+{
+    if(age>18)
+        filteredAges.add(age)
+}
+
+Here, we have filetred data based on condition age should be greater than 18
+
+Reduce
+Reduce operation is generally computes result out of mapped/filtered data
+
+List<Interger> filteredAges
+int people = filteredAges.size();
+
+If reduce operation operator is not associative, we can't gurantee result(In parallel, it can be different on each run)
+
+List<Integer> ints
+int sum=0
+BinaryOperator<Integer> op = (i1,i2) -> i1+i2;
+
+for(int i:ints)
+{
+    sum +=op.apply(sum,i);
+}
+
+
+what is sum =0?
+Its an identity element for sum operation
+
+If we have
+List<Integer> ints = [-1];
+int max=0;
+BinaryOperator<Integer> op = Integer:max;
+then
+for(int i:ints)
+{
+    max +=op.apply(sum,i);
+}
+
+max = 0, but it should be -1 (since list has only one element as -1)
+
+
+Optional
+
+If we donot have any identity element for an operation, then use optional
+An optional is a wrapper type that may be empty
