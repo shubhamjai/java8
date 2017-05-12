@@ -4,9 +4,9 @@ import main.java.entity.Person;
 import main.java.util.PersonUtil;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Comparator;
 
 public class Functions {
     public static void main(String args[]) {

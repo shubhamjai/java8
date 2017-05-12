@@ -1,8 +1,5 @@
 package main.java.entity;
 
-/**
- * Created by shubham on 06-05-2017.
- */
 public class Person {
     private String firstName;
     private String lastName;

@@ -21,10 +21,10 @@ public class Example {
         Predicate<Integer> p6 = Predicate.isEqualTo(1);
 
         System.out.println("\n Applying is equal to predicate");
-        System.out.println("Yes equals Yes -> Result : "+ p5.test("Yes"));
-        System.out.println("Yes equals No -> Result : "+ p5.test("No"));
-        System.out.println("1 equals 1 -> Result : "+ p6.test(1));
-        System.out.println("1 equals 2 -> Result : "+ p6.test(2));
+        System.out.println("Yes equals Yes -> Result : " + p5.test("Yes"));
+        System.out.println("Yes equals No -> Result : " + p5.test("No"));
+        System.out.println("1 equals 1 -> Result : " + p6.test(1));
+        System.out.println("1 equals 2 -> Result : " + p6.test(2));
 
     }
 

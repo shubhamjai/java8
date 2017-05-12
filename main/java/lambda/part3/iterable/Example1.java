@@ -7,8 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Example1 {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         List<Person> personList = PersonUtil.getPersonList();
         System.out.println("Filter List");
         personList.forEach(System.out::println);
@@ -17,7 +16,7 @@ public class Example1 {
         System.out.println("\nFilter List");
         personList.forEach(System.out::println);
 
-        personList.replaceAll(person -> new Person(person.getFirstName().toUpperCase(),person.getLastName().toUpperCase(),person.getAge()));
+        personList.replaceAll(person -> new Person(person.getFirstName().toUpperCase(), person.getLastName().toUpperCase(), person.getAge()));
         System.out.println("\nReplaced List");
         personList.forEach(System.out::println);
 

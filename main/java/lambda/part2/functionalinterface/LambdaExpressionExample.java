@@ -3,8 +3,7 @@ package main.java.lambda.part2.functionalinterface;
 import java.util.function.Predicate;
 
 public class LambdaExpressionExample {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         Predicate<String> anonymousPredicate = getAnonymousPredicate();
         testPredicate(anonymousPredicate);
         Predicate<String> lambdaPredicate = getLambdaPredicate();
@@ -17,7 +16,7 @@ public class LambdaExpressionExample {
     }
 
     private static Predicate<String> getAnonymousPredicate() {
-         return new Predicate<String>(){
+        return new Predicate<String>() {
             @Override
             public boolean test(String s) {
                 return s.length() > 10;
